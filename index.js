@@ -11,7 +11,7 @@ const productShoes = [
     { id: 4, name: "vans", type: ["authentic", "oldSkool", "oneStart"], size: [39, 40, 41, 42, 43], price: [authentic, oldSkool, oneStart] },
 ];
 
-alert("Bienvenido a NFT valdivia \nPor el momento solo contamos con zapatillas\nPronto tendremos mas novedades para usted");
+alert("Bienvenido a shoers valdivia \nPor el momento solo contamos con zapatillas\nPronto tendremos mas novedades para usted");
 menu()
 do {
     validate = parseInt(prompt("Desea realizar otra operacion? \nDigite 1 para continuar, 0 para salir"));
