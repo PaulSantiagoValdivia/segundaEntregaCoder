@@ -1,45 +1,7 @@
-/* let list = document.getElementById("lista");
-let typeLength;
-let iterator = 0;
-productShoes.forEach(product => {
-    typeLength = product.type.length;
-    while (iterator < typeLength) {
-        let item = document.createElement("li");
-        item.innerHTML = `
-        <h2>ID:${product.id}</h2>
-        <h3>marca: ${product.name}</h3>
-        <p>modelo: ${product.type[iterator]}</p>
-        <p>precio: ${product.price[iterator]}U$D</p> 
-        <a>talla: ${product.size}</a>`;
-        iterator++;
-        list.append(item);
-    }
-    iterator = 0;
-}); */
-/* let list = document.getElementById("lista");
-    let typeLength;
-    let iterator=0;
-    productShoes.forEach(product =>{
-        typeLength= product.type.length;
-    while(iterator < typeLength){
-        let item = document.createElement("div");
-        item.innerHTML = `
-        <h2>ID:${product.id}</h2>
-        <h3>marca: ${product.name}</h3>
-        <p>modelo: ${product.type[iterator]}</p>
-        <p>precio: ${product.price[iterator]}U$D</p> 
-        <a>talla: ${product.size}</a>`;
-        iterator++;
-        list.append(item);  
-    }
-    iterator=0;
-    }); */
-let compra;
+
 let shoppingCart = [];
 let validate;
 let option;
-let nameShoes;
-let found;
 let mensaje;
 const airforce1 = 150, cortez = 130, airmax = 180, originals = 130, performance = 120, style = 125, rsfast = 160, runner = 100, authentic = 160, oldSkool = 165, oneStart = 170, dc1 = 120, dc2 = 110, dc3 = 140;
 const productShoes = [
@@ -47,7 +9,6 @@ const productShoes = [
     { id: 2, name: "adidas", type: ["originals", "performance", "style"], size: [39, 40, 41, 42, 43], price: [originals, performance, style] },
     { id: 3, name: "puma", type: ["rsfast", "runner"], size: [39, 40, 41, 42, 43], price: [rsfast, runner] },
     { id: 4, name: "vans", type: ["authentic", "oldSkool", "oneStart"], size: [39, 40, 41, 42, 43], price: [authentic, oldSkool, oneStart] },
-    { id: 5, name: "dc", type: ["dc1", "dc2", "dc3"], size: [39, 40, 41, 42, 43], price: [dc1, dc2, dc3] },
 ];
 
 alert("Bienvenido a NFT valdivia \nPor el momento solo contamos con zapatillas\nPronto tendremos mas novedades para usted");
@@ -71,7 +32,7 @@ function menu() {
             //LLamado a funciones 
             case 1: showCatalg(); break;
             case 2: showTrademark(); break;
-            case 3: showAllMark(); break;
+            case 3: showAllMark(); break;        
             default: alert("ingrese una opcion valida");
         }
     } while (option !== 1 && option !== 2 && option !== 3);
@@ -103,25 +64,26 @@ function showValidate(validate) {
 function showAllMark() {
     let mensaje
     let typeLength;
-    let iterator=0;
-    for (const product of productShoes){
-        typeLength= product.type.length;
-    while(iterator < typeLength){
-        mensaje = `
+    let iterator = 0;
+    let guardado;
+    nameShoes=prompt("Ingrese el modelo que desea comprar");
+    for (const product of productShoes) {
+        typeLength = product.type.length;
+        while (iterator < typeLength) {
+            mensaje = `
         marca: ${product.name}
         modelo: ${product.type[iterator]}
         precio: ${product.price[iterator]}U$D 
         talla: ${product.size}`;
-        alert(mensaje);
-        iterator++;
-    }
-    iterator=0;
-    }
+            alert(mensaje);
+            iterator++;
+        }
         
-}
-
-function initiation() {
-    //validamos que el usuario ingrese una opcion que este en el menu 
-    functiion
+        iterator = 0;
+    }
 
 }
+
+
+
+
